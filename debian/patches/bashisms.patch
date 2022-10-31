@@ -1,0 +1,30 @@
+Index: manpages-tr-1.0.5.1/source/manderle.sh
+===================================================================
+--- manpages-tr-1.0.5.1.orig/source/manderle.sh
++++ manpages-tr-1.0.5.1/source/manderle.sh
+@@ -1,8 +1,8 @@
+ #!/bin/sh
+ #
+ LANG=C gcc -Wall -lz -o xml2man xml2man.c
+-mandirs=(1 2 3 4 5 6 7 8)
+-for i in ${mandirs[@]};
++mandirs="1 2 3 4 5 6 7 8"
++for i in ${mandirs};
+ do
+     mkdir ../tr/man$i;
+   for j in man$i/*;
+@@ -10,12 +10,12 @@ do
+     manfile=`basename $j .$i.xml`;
+     echo man$i/$manfile.$i derleniyor;
+     target="../tr/man$i/$manfile.$i";
+-    if [ "$1" == "--debianize" ]
++    if [ "$1" = "--debianize" ]
+     then
+         ./xml2man $1 $j > ${target}.$1; 
+ 	iconv -f UTF-8 -t ISO-8859-9 ${target}.$1 > $target;
+ 	rm -f ${target}.$1;   
+-    elif [ "$1" == "--utf8" ]
++    elif [ "$1" = "--utf8" ]
+     then
+ 	./xml2man $1 $j > $target;
+     else

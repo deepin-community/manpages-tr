@@ -1,0 +1,63 @@
+manpages-tr (1.0.5.1-3) unstable; urgency=high
+
+  * Conflicting files with man-db removed (Closes: #889805)
+  * Removed extra timestamps from the build system (Closes: #854293)
+  * chroot translation moved into man8 (Closes: #856009)
+  * Fixed an issue which prevents manual prune list generation
+
+ -- Murat Demirten <murat@debian.org>  Thu, 08 Feb 2018 13:38:20 +0300
+
+manpages-tr (1.0.5.1-2) unstable; urgency=low
+
+  * Patches included (Closes: #540638).
+  * Packaging must be continue, not orphaned (Closes: #543745)
+
+ -- Murat Demirten <murat@debian.org>  Wed, 29 Oct 2009 14:12:18 +0200
+
+manpages-tr (1.0.5.1-1.2) unstable; urgency=low
+
+  * Non-maintainer upload to fix an RC bug.
+  * Apply patch by Nicolas François to fix broken pruning of manpages
+    (Closes: #526033) - thanks Nicolas!
+
+ -- Holger Levsen <holger@debian.org>  Sun, 09 Aug 2009 12:30:16 +0200
+
+manpages-tr (1.0.5.1-1.1) unstable; urgency=low
+
+  * Non-maintainer upload to fix a RG bug.
+  * Fix bashisms (Closes: #485057)
+    - Thanks to Manuel Prinz <debian@pinguinkiste.de> for the patch.
+    + Build-Depend on quilt to manage patch
+
+ -- Raphael Geissert <atomo64@gmail.com>  Sat, 28 Jun 2008 14:30:54 -0500
+
+manpages-tr (1.0.5.1-1) unstable; urgency=low
+
+  * Fixed debian/rules build error on manpage-tr.files temprorary file. 
+    Closes: #479941
+  * Fixed \N'45' problem in man pages. Closes: #478085
+
+ -- Murat Demirten <murat@debian.org>  Thu, 7 May 2008 23:06:14 +0300
+
+manpages-tr (1.0.5-1) unstable; urgency=low
+
+  * Added build dependency against locales and xsltproc package due 
+    to the tr_TR.UTF-8 locale requirements at build stage. Added locale-gen
+    script for generating tr_TR.UTF-8 locale for build. Closes: #477960
+
+ -- Murat Demirten <murat@debian.org>  Sat, 26 Apr 2008 19:28:30 +0300
+
+manpages-tr (1.0.5) unstable; urgency=low
+
+  * New upstream version.
+  * debian/manpages-tr.prune: Update prune list to avoid installing
+    duplicate man pages. Closes: #330579
+
+ -- Murat Demirten <murat@debian.org>  Mon, 21 Apr 2008 13:49:20 +0300
+
+manpages-tr (1.0.2+cvs20040401-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Murat Demirten <murat@debian.org>  Thu, 1 Apr 2004 01:04:50 +0100
+

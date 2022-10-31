@@ -1,0 +1,9 @@
+--- a/source/manderle.sh
++++ b/source/manderle.sh
+@@ -26,5 +26,5 @@
+   then
+ 	cp tr/man$i/* ../tr/man$i/
+   fi
+-  gzip -9 ../tr/man$i/*;
++  gzip -9n ../tr/man$i/*;
+ done
